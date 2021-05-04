@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">foodShareApp</string>
     <string name="title_activity_maps">Map</string>
+    <string name="login_with_gmail">Login With Gmail</string>
+    <string name="login_with_facebook">Login With Facebook</string>
+    <string name="login_with_email">Login With Email</string>
 </resources>
