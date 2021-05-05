@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/emailLoginBtn"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -15,7 +15,10 @@
         android:layout_marginEnd="50dp"
         android:background="@drawable/login_btn_shape"
         android:text="@string/login_with_email"
-
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -23,24 +26,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.305" />
 
-    <Button
-        android:id="@+id/gmailLoginBtn"
-        android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="23dp"
-        android:layout_marginEnd="50dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/login_btn_shape"
-        android:text="@string/login_with_gmail"
-        app:layout_constraintBottom_toTopOf="@+id/facebookLoginBtn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/emailLoginBtn"
-        app:layout_goneMarginLeft="50dp" />
-
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/facebookLoginBtn"
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -48,11 +34,33 @@
         android:layout_marginEnd="50dp"
         android:background="@drawable/login_btn_shape"
         android:text="@string/login_with_facebook"
+        android:textColor="#FFFFFF"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.711" />
+
+
+    <com.google.android.gms.common.SignInButton
+        android:id="@+id/sign_in_button"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="46dp"
+        android:layout_marginBottom="55dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        app:layout_constraintBottom_toTopOf="@+id/facebookLoginBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emailLoginBtn"
+        tools:ignore="MissingConstraints">
+
+    </com.google.android.gms.common.SignInButton>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
